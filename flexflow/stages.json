@@ -1,0 +1,2223 @@
+{
+    "data": {
+        "stages": {
+            "created": "2023-08-11 19:48:28",
+            "created_by": "150",
+            "id": "501",
+            "modified": "2024-02-13 13:56:54",
+            "modified_by": "148",
+            "name": "00 DRAFT",
+            "type_id": "67",
+            "workflow_progress_direction": "Starting Point",
+            "model_state_id": "8",
+            "before_enter_rule_id": null,
+            "before_exit_rule_id": null,
+            "deleted": "0",
+            "desc": null,
+            "flags": "0",
+            "imported": null,
+            "imported_by": null,
+            "is_deemed_approved": "0",
+            "is_demo_data": "0",
+            "is_readonly": "0",
+            "old_before_enter_rule_id": null,
+            "old_before_exit_rule_id": null,
+            "owned_by": null,
+            "revision": "5",
+            "stage_flags": null,
+            "help_text": null,
+            "minimum_allocated_time": null,
+            "maximum_allocated_time": null,
+            "is_fixed_start_date": "0",
+            "conditional_rule_id": null,
+            "maximum_allocation_time_field": null,
+            "__created_by": "Kay GABRI",
+            "created_by_user_name": "kay@62mile.vc",
+            "__modified_by": "Tushar Takkar",
+            "modified_by_user_name": "tushar@canstartco.com",
+            "__type_id": "SUV Client",
+            "__owned_by": "",
+            "owned_by_user_name": null,
+            "__conditional_rule_id": "",
+            "__model_state_id": "SUV Workflow: 00-DRAFT",
+            "created_by_model": "created_by_user",
+            "modified_by_model": "modified_by_user",
+            "type_id_model": "types",
+            "model_state_id_model": "model_states",
+            "possible_actions": [
+                {
+                    "__action_id": "Submit+Move To Next",
+                    "action_id": "207",
+                    "created": "2023-08-12 22:05:02",
+                    "created_by": "150",
+                    "id": "779",
+                    "is_default": "1",
+                    "modified": "2023-08-14 17:37:43",
+                    "modified_by": "150",
+                    "stage_id": "501",
+                    "sequence": "1",
+                    "deleted": "0",
+                    "flags": "0",
+                    "imported": null,
+                    "imported_by": null,
+                    "is_demo_data": "0",
+                    "owned_by": null,
+                    "revision": "2",
+                    "action_auto_trigger_rule_id": null,
+                    "confirmation_message": null,
+                    "require_confirmation": null,
+                    "require_workflow_internal_comment": null,
+                    "skip_validation": "0",
+                    "model_state_id": null,
+                    "conditional_rule_id": null,
+                    "confirmation_message_state": null,
+                    "__stage_id": "",
+                    "__created_by": "Kay GABRI",
+                    "created_by_user_name": "kay@62mile.vc",
+                    "__modified_by": "Kay GABRI",
+                    "modified_by_user_name": "kay@62mile.vc",
+                    "__owned_by": "",
+                    "owned_by_user_name": null,
+                    "__action_auto_trigger_rule_id": "",
+                    "__model_state_id": "",
+                    "__conditional_rule_id": "",
+                    "action_id_model": "actions",
+                    "created_by_model": "created_by_user",
+                    "modified_by_model": "modified_by_user",
+                    "move_to_stages": [
+                        {
+                            "__stage_id": "01 ONBOARDING",
+                            "created": "2023-08-12 22:05:02",
+                            "created_by": "150",
+                            "deleted": "0",
+                            "flags": null,
+                            "id": "845",
+                            "is_demo_data": "0",
+                            "modified": "2023-08-14 17:37:43",
+                            "modified_by": "150",
+                            "name": null,
+                            "owned_by": null,
+                            "possible_action_id": "779",
+                            "relationship": null,
+                            "revision": "1",
+                            "stage_id": "502",
+                            "__created_by": "Kay GABRI",
+                            "created_by_user_name": "kay@62mile.vc",
+                            "__modified_by": "Kay GABRI",
+                            "modified_by_user_name": "kay@62mile.vc",
+                            "__owned_by": "",
+                            "owned_by_user_name": null,
+                            "__possible_action_id": "",
+                            "created_by_model": "created_by_user",
+                            "modified_by_model": "modified_by_users",
+                            "stage_id_model": "stages"
+                        }
+                    ],
+                    "action_based_field_validations": [],
+                    "correlated_workflows": [],
+                    "controller": "crm.peoples"
+                }
+            ],
+            "stage_based_field_permissions": [],
+            "stage_based_field_validations": [],
+            "controller": "crm.peoples"
+        }
+    },
+    "errors": [],
+    "message": [],
+    "field_validation_rules": {
+        "Framework": [
+            {
+                "text": "kernel::notEmpty",
+                "value": "\\kernel\\validation::notEmpty"
+            },
+            {
+                "text": "kernel::numericIfNotEmpty",
+                "value": "\\kernel\\validation::numericIfNotEmpty"
+            },
+            {
+                "text": "kernel::integerIfNotEmpty",
+                "value": "\\kernel\\validation::integerIfNotEmpty"
+            },
+            {
+                "text": "kernel::noLoop",
+                "value": "\\kernel\\validation::noLoop"
+            },
+            {
+                "text": "kernel::writeOnceUniqueValue",
+                "value": "\\kernel\\validation::writeOnceUniqueValue"
+            },
+            {
+                "text": "kernel::notDuplicate",
+                "value": "\\kernel\\validation::notDuplicate"
+            },
+            {
+                "text": "kernel::compareDates",
+                "value": "\\kernel\\validation::compareDates"
+            },
+            {
+                "text": "kernel::checkControllerAction",
+                "value": "\\kernel\\validation::checkControllerAction"
+            },
+            {
+                "text": "kernel::isBool",
+                "value": "\\kernel\\validation::isBool"
+            },
+            {
+                "text": "kernel::isValidEmail",
+                "value": "\\kernel\\validation::isValidEmail"
+            },
+            {
+                "text": "kernel::isFloatNumber",
+                "value": "\\kernel\\validation::isFloatNumber"
+            },
+            {
+                "text": "kernel::isIntNumber",
+                "value": "\\kernel\\validation::isIntNumber"
+            },
+            {
+                "text": "kernel::isValidIP",
+                "value": "\\kernel\\validation::isValidIP"
+            },
+            {
+                "text": "kernel::isValidURL",
+                "value": "\\kernel\\validation::isValidURL"
+            },
+            {
+                "text": "kernel::isValidPassword",
+                "value": "\\kernel\\validation::isValidPassword"
+            },
+            {
+                "text": "kernel::isValidPhoneNumber",
+                "value": "\\kernel\\validation::isValidPhoneNumber"
+            },
+            {
+                "text": "kernel::dateGreaterOrEqualToday",
+                "value": "\\kernel\\validation::dateGreaterOrEqualToday"
+            },
+            {
+                "text": "kernel::dateLessOrEqualToday",
+                "value": "\\kernel\\validation::dateLessOrEqualToday"
+            },
+            {
+                "text": "kernel::dateGreaterOrEqualStartDate",
+                "value": "\\kernel\\validation::dateGreaterOrEqualStartDate"
+            },
+            {
+                "text": "kernel::datetimeGreaterOrEqualNow",
+                "value": "\\kernel\\validation::datetimeGreaterOrEqualNow"
+            },
+            {
+                "text": "kernel::ifNotEmptyGridHasFieldValue",
+                "value": "\\kernel\\validation::ifNotEmptyGridHasFieldValue"
+            },
+            {
+                "text": "kernel::fieldHasValue",
+                "value": "\\kernel\\validation::fieldHasValue"
+            }
+        ],
+        "Access Controls": [
+            {
+                "text": "users_domain_logic::validateUserName",
+                "value": "module\\access_controls\\model\\users_domain_logic::validateUserName"
+            },
+            {
+                "text": "users_domain_logic::currentPassword",
+                "value": "module\\access_controls\\model\\users_domain_logic::currentPassword"
+            },
+            {
+                "text": "users_domain_logic::newPassword",
+                "value": "module\\access_controls\\model\\users_domain_logic::newPassword"
+            },
+            {
+                "text": "users_domain_logic::doesUserNameExists",
+                "value": "module\\access_controls\\model\\users_domain_logic::doesUserNameExists"
+            },
+            {
+                "text": "users_domain_logic::doesActiveUserNameExists",
+                "value": "module\\access_controls\\model\\users_domain_logic::doesActiveUserNameExists"
+            },
+            {
+                "text": "users_domain_logic::duplicateUsername",
+                "value": "module\\access_controls\\model\\users_domain_logic::duplicateUsername"
+            },
+            {
+                "text": "users_domain_logic::duplicateOrganisation",
+                "value": "module\\access_controls\\model\\users_domain_logic::duplicateOrganisation"
+            },
+            {
+                "text": "users_domain_logic::isValidToken",
+                "value": "module\\access_controls\\model\\users_domain_logic::isValidToken"
+            },
+            {
+                "text": "users_domain_logic::theme",
+                "value": "module\\access_controls\\model\\users_domain_logic::theme"
+            },
+            {
+                "text": "users_domain_logic::validate_roles",
+                "value": "module\\access_controls\\model\\users_domain_logic::validate_roles"
+            }
+        ],
+        "Admin Module Installer": [
+            {
+                "text": "modules_domain_logic::checkModule",
+                "value": "module\\development_base\\model\\modules_domain_logic::checkModule"
+            },
+            {
+                "text": "modules_domain_logic::moduleNamelength",
+                "value": "module\\development_base\\model\\modules_domain_logic::moduleNamelength"
+            },
+            {
+                "text": "modules_domain_logic::moduleNameCharactar",
+                "value": "module\\development_base\\model\\modules_domain_logic::moduleNameCharactar"
+            },
+            {
+                "text": "modules_domain_logic::createModuleFolder",
+                "value": "module\\development_base\\model\\modules_domain_logic::createModuleFolder"
+            }
+        ],
+        "Administration": [
+            {
+                "text": "user_licenses::checkLicence",
+                "value": "module\\administration\\model\\user_licenses::checkLicence"
+            }
+        ],
+        "Campaigns": [
+            {
+                "text": "campaigns_domain_logic::notEmptyListview",
+                "value": "module\\campaigns\\model\\campaigns_domain_logic::notEmptyListview"
+            },
+            {
+                "text": "campaigns_domain_logic::checkMergeWords",
+                "value": "module\\campaigns\\model\\campaigns_domain_logic::checkMergeWords"
+            },
+            {
+                "text": "campaigns_domain_logic::checkListview",
+                "value": "module\\campaigns\\model\\campaigns_domain_logic::checkListview"
+            },
+            {
+                "text": "campaigns_domain_logic::checkTagview",
+                "value": "module\\campaigns\\model\\campaigns_domain_logic::checkTagview"
+            },
+            {
+                "text": "campaigns_domain_logic::checkCampaignList",
+                "value": "module\\campaigns\\model\\campaigns_domain_logic::checkCampaignList"
+            },
+            {
+                "text": "campaigns_domain_logic::checkCSV",
+                "value": "module\\campaigns\\model\\campaigns_domain_logic::checkCSV"
+            },
+            {
+                "text": "attachments_domain_logic::uploadErrorOk",
+                "value": "module\\document_management_base\\model\\attachments_domain_logic::uploadErrorOk"
+            },
+            {
+                "text": "attachments_domain_logic::uploadErrorIntSize",
+                "value": "module\\document_management_base\\model\\attachments_domain_logic::uploadErrorIntSize"
+            },
+            {
+                "text": "attachments_domain_logic::uploadErrorFormSize",
+                "value": "module\\document_management_base\\model\\attachments_domain_logic::uploadErrorFormSize"
+            },
+            {
+                "text": "attachments_domain_logic::uploadErrorPartial",
+                "value": "module\\document_management_base\\model\\attachments_domain_logic::uploadErrorPartial"
+            },
+            {
+                "text": "attachments_domain_logic::uploadErrorNoFile",
+                "value": "module\\document_management_base\\model\\attachments_domain_logic::uploadErrorNoFile"
+            },
+            {
+                "text": "attachments_domain_logic::uploadErrorNoTmpDir",
+                "value": "module\\document_management_base\\model\\attachments_domain_logic::uploadErrorNoTmpDir"
+            },
+            {
+                "text": "attachments_domain_logic::uploadErrorCantWrite",
+                "value": "module\\document_management_base\\model\\attachments_domain_logic::uploadErrorCantWrite"
+            },
+            {
+                "text": "attachments_domain_logic::uploadErrorExtension",
+                "value": "module\\document_management_base\\model\\attachments_domain_logic::uploadErrorExtension"
+            },
+            {
+                "text": "attachments_domain_logic::allowedExtensions",
+                "value": "module\\document_management_base\\model\\attachments_domain_logic::allowedExtensions"
+            }
+        ],
+        "Core": [
+            {
+                "text": "listviews_domain_logic::checkRenderAs",
+                "value": "module\\core\\model\\listviews_domain_logic::checkRenderAs"
+            },
+            {
+                "text": "listviews_domain_logic::validateDataViewHelpers",
+                "value": "module\\core\\model\\listviews_domain_logic::validateDataViewHelpers"
+            },
+            {
+                "text": "listviews_domain_logic::validateGraphParameters",
+                "value": "module\\core\\model\\listviews_domain_logic::validateGraphParameters"
+            },
+            {
+                "text": "listviews_domain_logic::validateQuerySyntex",
+                "value": "module\\core\\model\\listviews_domain_logic::validateQuerySyntex"
+            },
+            {
+                "text": "listviews_domain_logic::noDuplicateDefaultListview",
+                "value": "module\\core\\model\\listviews_domain_logic::noDuplicateDefaultListview"
+            },
+            {
+                "text": "listviews_domain_logic::checkQuerySyntex",
+                "value": "module\\core\\model\\listviews_domain_logic::checkQuerySyntex"
+            },
+            {
+                "text": "printviews_domain_logic::validatePHPTags",
+                "value": "module\\core\\model\\printviews_domain_logic::validatePHPTags"
+            }
+        ],
+        "Crm": [
+            {
+                "text": "peoples_domain_logic::checkDuplicateByPrimaryEmail",
+                "value": "module\\crm\\model\\peoples_domain_logic::checkDuplicateByPrimaryEmail"
+            }
+        ],
+        "Dashboards": [
+            {
+                "text": "widgets_domain_logic::max12",
+                "value": "module\\dashboards\\model\\widgets_domain_logic::max12"
+            }
+        ],
+        "Data Management": [
+            {
+                "text": "imports_domain_logic::checkModelClass",
+                "value": "module\\data_management\\model\\imports_domain_logic::checkModelClass"
+            },
+            {
+                "text": "imports_domain_logic::validateDataFiles",
+                "value": "module\\data_management\\model\\imports_domain_logic::validateDataFiles"
+            }
+        ],
+        "Development": [
+            {
+                "text": "locales::notDuplicate",
+                "value": "module\\development\\model\\locales::notDuplicate"
+            },
+            {
+                "text": "modules_domain_logic::checkModule",
+                "value": "module\\development_base\\model\\modules_domain_logic::checkModule"
+            },
+            {
+                "text": "modules_domain_logic::moduleNamelength",
+                "value": "module\\development_base\\model\\modules_domain_logic::moduleNamelength"
+            },
+            {
+                "text": "modules_domain_logic::moduleNameCharactar",
+                "value": "module\\development_base\\model\\modules_domain_logic::moduleNameCharactar"
+            },
+            {
+                "text": "modules_domain_logic::createModuleFolder",
+                "value": "module\\development_base\\model\\modules_domain_logic::createModuleFolder"
+            }
+        ],
+        "Development Base": [
+            {
+                "text": "controllers::validateParentTemplate",
+                "value": "module\\development_base\\model\\controllers::validateParentTemplate"
+            },
+            {
+                "text": "form_properties::noDuplicateForm",
+                "value": "module\\development_base\\model\\form_properties::noDuplicateForm"
+            },
+            {
+                "text": "form_properties::notEmpty",
+                "value": "module\\development_base\\model\\form_properties::notEmpty"
+            },
+            {
+                "text": "forms::noDuplicateDefaultForm",
+                "value": "module\\development_base\\model\\forms::noDuplicateDefaultForm"
+            },
+            {
+                "text": "forms::validateParentTemplate",
+                "value": "module\\development_base\\model\\forms::validateParentTemplate"
+            },
+            {
+                "text": "locales::notDuplicate",
+                "value": "module\\development_base\\model\\locales::notDuplicate"
+            },
+            {
+                "text": "menus::noDuplicate",
+                "value": "module\\development_base\\model\\menus::noDuplicate"
+            },
+            {
+                "text": "model_properties::columnNameSyntex",
+                "value": "module\\development_base\\model\\model_properties::columnNameSyntex"
+            },
+            {
+                "text": "model_properties::tableNameSyntex",
+                "value": "module\\development_base\\model\\model_properties::tableNameSyntex"
+            },
+            {
+                "text": "model_properties::noDuplicateModelAssociationAlias",
+                "value": "module\\development_base\\model\\model_properties::noDuplicateModelAssociationAlias"
+            },
+            {
+                "text": "model_properties::noDuplicateModelRuleName",
+                "value": "module\\development_base\\model\\model_properties::noDuplicateModelRuleName"
+            },
+            {
+                "text": "model_properties::noDuplicateModelBehaviour",
+                "value": "module\\development_base\\model\\model_properties::noDuplicateModelBehaviour"
+            },
+            {
+                "text": "model_properties::noDuplicateModelFieldProperties",
+                "value": "module\\development_base\\model\\model_properties::noDuplicateModelFieldProperties"
+            },
+            {
+                "text": "models::validateParentTemplate",
+                "value": "module\\development_base\\model\\models::validateParentTemplate"
+            },
+            {
+                "text": "modules_domain_logic::checkModule",
+                "value": "module\\development_base\\model\\modules_domain_logic::checkModule"
+            },
+            {
+                "text": "modules_domain_logic::moduleNamelength",
+                "value": "module\\development_base\\model\\modules_domain_logic::moduleNamelength"
+            },
+            {
+                "text": "modules_domain_logic::moduleNameCharactar",
+                "value": "module\\development_base\\model\\modules_domain_logic::moduleNameCharactar"
+            },
+            {
+                "text": "modules_domain_logic::createModuleFolder",
+                "value": "module\\development_base\\model\\modules_domain_logic::createModuleFolder"
+            }
+        ],
+        "Docgen": [
+            {
+                "text": "founders_domain_logic::notDuplicateFounder",
+                "value": "module\\docgen\\model\\founders_domain_logic::notDuplicateFounder"
+            }
+        ],
+        "Document Management": [
+            {
+                "text": "documents_domain_logic::checkDuplicateDocument",
+                "value": "module\\document_management\\model\\documents_domain_logic::checkDuplicateDocument"
+            }
+        ],
+        "Document Management Base": [
+            {
+                "text": "attachments_domain_logic::uploadErrorOk",
+                "value": "module\\document_management_base\\model\\attachments_domain_logic::uploadErrorOk"
+            },
+            {
+                "text": "attachments_domain_logic::uploadErrorIntSize",
+                "value": "module\\document_management_base\\model\\attachments_domain_logic::uploadErrorIntSize"
+            },
+            {
+                "text": "attachments_domain_logic::uploadErrorFormSize",
+                "value": "module\\document_management_base\\model\\attachments_domain_logic::uploadErrorFormSize"
+            },
+            {
+                "text": "attachments_domain_logic::uploadErrorPartial",
+                "value": "module\\document_management_base\\model\\attachments_domain_logic::uploadErrorPartial"
+            },
+            {
+                "text": "attachments_domain_logic::uploadErrorNoFile",
+                "value": "module\\document_management_base\\model\\attachments_domain_logic::uploadErrorNoFile"
+            },
+            {
+                "text": "attachments_domain_logic::uploadErrorNoTmpDir",
+                "value": "module\\document_management_base\\model\\attachments_domain_logic::uploadErrorNoTmpDir"
+            },
+            {
+                "text": "attachments_domain_logic::uploadErrorCantWrite",
+                "value": "module\\document_management_base\\model\\attachments_domain_logic::uploadErrorCantWrite"
+            },
+            {
+                "text": "attachments_domain_logic::uploadErrorExtension",
+                "value": "module\\document_management_base\\model\\attachments_domain_logic::uploadErrorExtension"
+            },
+            {
+                "text": "attachments_domain_logic::allowedExtensions",
+                "value": "module\\document_management_base\\model\\attachments_domain_logic::allowedExtensions"
+            },
+            {
+                "text": "attachments_domain_logic::uploadErrorOk",
+                "value": "module\\document_management_base\\model\\attachments_domain_logic::uploadErrorOk"
+            },
+            {
+                "text": "attachments_domain_logic::uploadErrorIntSize",
+                "value": "module\\document_management_base\\model\\attachments_domain_logic::uploadErrorIntSize"
+            },
+            {
+                "text": "attachments_domain_logic::uploadErrorFormSize",
+                "value": "module\\document_management_base\\model\\attachments_domain_logic::uploadErrorFormSize"
+            },
+            {
+                "text": "attachments_domain_logic::uploadErrorPartial",
+                "value": "module\\document_management_base\\model\\attachments_domain_logic::uploadErrorPartial"
+            },
+            {
+                "text": "attachments_domain_logic::uploadErrorNoFile",
+                "value": "module\\document_management_base\\model\\attachments_domain_logic::uploadErrorNoFile"
+            },
+            {
+                "text": "attachments_domain_logic::uploadErrorNoTmpDir",
+                "value": "module\\document_management_base\\model\\attachments_domain_logic::uploadErrorNoTmpDir"
+            },
+            {
+                "text": "attachments_domain_logic::uploadErrorCantWrite",
+                "value": "module\\document_management_base\\model\\attachments_domain_logic::uploadErrorCantWrite"
+            },
+            {
+                "text": "attachments_domain_logic::uploadErrorExtension",
+                "value": "module\\document_management_base\\model\\attachments_domain_logic::uploadErrorExtension"
+            },
+            {
+                "text": "attachments_domain_logic::allowedExtensions",
+                "value": "module\\document_management_base\\model\\attachments_domain_logic::allowedExtensions"
+            }
+        ],
+        "Flexflow": [
+            {
+                "text": "types_domain_logic::checkDuplicateLiveProcesses",
+                "value": "module\\flexflow\\model\\types_domain_logic::checkDuplicateLiveProcesses"
+            }
+        ],
+        "Installation": [
+            {
+                "text": "app::isConfigWritable",
+                "value": "module\\installation\\model\\app::isConfigWritable"
+            }
+        ],
+        "Projectivity": [
+            {
+                "text": "tasks_domain_logic::notEmptyProjectOrRelatedTo",
+                "value": "module\\projectivity\\model\\tasks_domain_logic::notEmptyProjectOrRelatedTo"
+            }
+        ]
+    },
+    "field_permission_rules": [],
+    "primary_key": "id",
+    "display_field": "name",
+    "model": "stages",
+    "model_class": "\\module\\flexflow\\model\\stages",
+    "id": "501",
+    "permissions": [],
+    "model_associations": {
+        "created_by_user": {
+            "associationAlias": "created_by_user",
+            "className": "\\module\\access_controls\\model\\users",
+            "assocType": "belongsTo",
+            "foreignKey": "created_by",
+            "show_link": "0"
+        },
+        "modified_by_user": {
+            "associationAlias": "modified_by_user",
+            "className": "\\module\\access_controls\\model\\users",
+            "assocType": "belongsTo",
+            "foreignKey": "modified_by",
+            "show_link": "0"
+        },
+        "possible_actions": {
+            "assocType": "hasMany",
+            "className": "\\module\\flexflow\\model\\possible_actions",
+            "associationAlias": "possible_actions",
+            "foreignKey": "stage_id",
+            "show_link": "0",
+            "isSubModel": "1",
+            "consider_as_submodel_for_deep_cloning": "1",
+            "business_key": "656f570d-b7ec-443e-9acb-0a14ac69033c",
+            "isAclParent": "0",
+            "isAclChild": "0",
+            "isSearchable": "0",
+            "inheritEditAcl": "0",
+            "inheritDeleteAcl": "0"
+        },
+        "business_rules": {
+            "assocType": "hasMany",
+            "className": "\\module\\brules\\model\\business_rules",
+            "associationAlias": "business_rules",
+            "foreignKey": "stage_id",
+            "show_link": "1",
+            "consider_as_submodel_for_deep_cloning": "1",
+            "business_key": "656f5705-d4fc-4c60-b285-0a14ac69033c",
+            "isAclParent": "0",
+            "isAclChild": "0",
+            "isSubModel": "0",
+            "isSearchable": "0",
+            "inheritEditAcl": "0",
+            "inheritDeleteAcl": "0"
+        },
+        "types": {
+            "assocType": "belongsTo",
+            "className": "\\module\\flexflow\\model\\types",
+            "associationAlias": "types",
+            "foreignKey": "type_id",
+            "show_link": "1",
+            "isAclParent": "0",
+            "isAclChild": "0",
+            "isSubModel": "0"
+        },
+        "actor_stage": {
+            "assocType": "hasMany",
+            "className": "\\module\\flexflow\\model\\actor_stage",
+            "associationAlias": "actor_stage",
+            "foreignKey": "stage_id",
+            "show_link": "1",
+            "consider_as_submodel_for_deep_cloning": "1",
+            "business_key": "656f56f7-9ad0-4554-af84-0a29ac69033c",
+            "isAclParent": "0",
+            "isAclChild": "0",
+            "isSubModel": "0",
+            "isSearchable": "0",
+            "inheritEditAcl": "0",
+            "inheritDeleteAcl": "0"
+        },
+        "owned_by_user": {
+            "className": "\\module\\access_controls\\model\\users",
+            "assocType": "belongsTo",
+            "foreignKey": "owned_by",
+            "associationAlias": "owned_by_user"
+        },
+        "conditional_rules": {
+            "assocType": "belongsTo",
+            "className": "\\module\\brules\\model\\business_rules",
+            "associationAlias": "conditional_rules",
+            "foreignKey": "conditional_rule_id",
+            "show_link": "1",
+            "business_key": "645a7f6b-a054-4488-b6b7-45b4ac69033c",
+            "isAclChild": "0",
+            "isSubModel": "0",
+            "isSearchable": "0",
+            "consider_as_submodel_for_deep_cloning": "0"
+        },
+        "stage_based_field_permissions": {
+            "assocType": "hasMany",
+            "className": "\\module\\flexflow\\model\\stage_based_field_permissions",
+            "associationAlias": "stage_based_field_permissions",
+            "foreignKey": "stage_id",
+            "show_link": "1",
+            "isSubModel": "1",
+            "consider_as_submodel_for_deep_cloning": "1",
+            "business_key": "656f571c-1448-469a-85bb-0a28ac69033c",
+            "isAclParent": "0",
+            "isAclChild": "0",
+            "isSearchable": "0",
+            "inheritEditAcl": "0",
+            "inheritDeleteAcl": "0"
+        },
+        "stage_based_field_validations": {
+            "assocType": "hasMany",
+            "className": "\\module\\flexflow\\model\\stage_based_field_validations",
+            "associationAlias": "stage_based_field_validations",
+            "foreignKey": "stage_id",
+            "show_link": "1",
+            "isSubModel": "1",
+            "consider_as_submodel_for_deep_cloning": "1",
+            "business_key": "656f5726-be04-4e2c-902c-0a29ac69033c",
+            "isAclParent": "0",
+            "isAclChild": "0",
+            "isSearchable": "0",
+            "inheritEditAcl": "0",
+            "inheritDeleteAcl": "0"
+        },
+        "model_states": {
+            "assocType": "belongsTo",
+            "className": "\\module\\flexflow\\model\\model_states",
+            "associationAlias": "model_states",
+            "foreignKey": "model_state_id",
+            "show_link": "1",
+            "business_key": "650446bc-6238-41a7-b5d8-4370ac69033c",
+            "isAclParent": "0",
+            "isAclChild": "0",
+            "isSubModel": "0",
+            "isSearchable": "0",
+            "consider_as_submodel_for_deep_cloning": "0"
+        },
+        "stage_tasks": {
+            "assocType": "hasMany",
+            "className": "\\module\\flexflow\\model\\stage_tasks",
+            "associationAlias": "stage_tasks",
+            "foreignKey": "stage_id",
+            "show_link": "1",
+            "consider_as_submodel_for_deep_cloning": "1",
+            "business_key": "657c6d38-2d40-4c4b-9b60-433cac69033c",
+            "isAclParent": "0",
+            "isAclChild": "0",
+            "isSubModel": "0",
+            "isSearchable": "0",
+            "inheritEditAcl": "0",
+            "inheritDeleteAcl": "0"
+        },
+        "stage_contracts": {
+            "assocType": "hasMany",
+            "className": "\\module\\flexflow\\model\\stage_contracts",
+            "associationAlias": "stage_contracts",
+            "foreignKey": "stage_id",
+            "show_link": "1",
+            "consider_as_submodel_for_deep_cloning": "1",
+            "business_key": "657c6d5f-a4c4-49fd-a832-433fac69033c",
+            "isAclParent": "0",
+            "isAclChild": "0",
+            "isSubModel": "0",
+            "isSearchable": "0",
+            "inheritEditAcl": "0",
+            "inheritDeleteAcl": "0"
+        },
+        "stage_documents": {
+            "assocType": "hasMany",
+            "className": "\\module\\flexflow\\model\\stage_documents",
+            "associationAlias": "stage_documents",
+            "foreignKey": "stage_id",
+            "show_link": "1",
+            "consider_as_submodel_for_deep_cloning": "1",
+            "business_key": "657c6dc7-dc78-481c-b8a0-44dcac69033c",
+            "isAclParent": "0",
+            "isAclChild": "0",
+            "isSubModel": "0",
+            "isSearchable": "0",
+            "inheritEditAcl": "0",
+            "inheritDeleteAcl": "0"
+        },
+        "move_to_stages": {
+            "className": "\\module\\flexflow\\model\\move_to_stages",
+            "assocType": "hasMany",
+            "foreignKey": "stage_id",
+            "name": "move_to_stages",
+            "is_binded": true
+        },
+        "notifications_stages": {
+            "className": "\\module\\flexflow\\model\\notifications_stages",
+            "assocType": "hasMany",
+            "foreignKey": "stage_id",
+            "name": "notifications_stages",
+            "is_binded": true
+        },
+        "stage_log": {
+            "className": "\\module\\flexflow\\model\\stage_log",
+            "assocType": "hasMany",
+            "foreignKey": "stage_id",
+            "name": "stage_log",
+            "is_binded": true
+        },
+        "stage_task_log": {
+            "className": "\\module\\flexflow\\model\\stage_task_log",
+            "assocType": "hasMany",
+            "foreignKey": "stage_id",
+            "name": "stage_task_log",
+            "is_binded": true
+        },
+        "stage_contract_log": {
+            "className": "\\module\\flexflow\\model\\stage_contract_log",
+            "assocType": "hasMany",
+            "foreignKey": "stage_id",
+            "name": "stage_contract_log",
+            "is_binded": true
+        },
+        "stage_document_log": {
+            "className": "\\module\\flexflow\\model\\stage_document_log",
+            "assocType": "hasMany",
+            "foreignKey": "stage_id",
+            "name": "stage_document_log",
+            "is_binded": true
+        },
+        "stage_configuration_log": {
+            "className": "\\module\\flexflow\\model\\stage_configuration_log",
+            "assocType": "hasMany",
+            "foreignKey": "stage_id",
+            "name": "stage_configuration_log",
+            "is_binded": true
+        },
+        "correlated_workflows": {
+            "className": "\\module\\flexflow\\model\\correlated_workflows",
+            "assocType": "hasMany",
+            "foreignKey": "correlated_workflow_stage_id",
+            "name": "correlated_workflows",
+            "is_binded": true
+        },
+        "correlated_workflow_log": {
+            "className": "\\module\\flexflow\\model\\correlated_workflow_log",
+            "assocType": "hasMany",
+            "foreignKey": "stage_id",
+            "name": "correlated_workflow_log",
+            "is_binded": true
+        }
+    },
+    "model_behaviours": {
+        "\\module\\core\\behaviour\\revision_log": {
+            "name": "\\module\\core\\behaviour\\revision_log",
+            "ignore_modules": [
+                "logging",
+                "development_base",
+                "development"
+            ],
+            "ignore_models": [
+                "\\module\\access_controls\\model\\design_acl"
+            ]
+        }
+    },
+    "is_pseudo_design_element": 0,
+    "name": "00 DRAFT",
+    "filterRules": {
+        "name": [
+            {
+                "rule": "required"
+            },
+            {
+                "rule": "1024",
+                "params": {
+                    "options": [
+                        "\\kernel\\validation",
+                        "notEmpty"
+                    ]
+                }
+            }
+        ],
+        "possible_actions": {
+            "action_id": [
+                {
+                    "rule": "required"
+                },
+                {
+                    "rule": "1024",
+                    "params": {
+                        "options": [
+                            "\\kernel\\validation",
+                            "notEmpty"
+                        ]
+                    }
+                }
+            ],
+            "stage_id": [
+                {
+                    "rule": "required"
+                },
+                {
+                    "rule": "1024",
+                    "params": {
+                        "options": [
+                            "\\kernel\\validation",
+                            "notEmpty"
+                        ]
+                    }
+                }
+            ]
+        },
+        "stage_based_field_permissions": [],
+        "stage_based_field_validations": []
+    },
+    "form": {
+        "name": "default",
+        "method": "POST",
+        "ENCTYPE": "multipart/form-data",
+        "model_class": "\\module\\flexflow\\model\\stages",
+        "template": "form",
+        "children": [
+            {
+                "helper": "\\kernel\\form",
+                "method": "panel",
+                "class": "align-center",
+                "empty": "1",
+                "show_collapsed": "0",
+                "not_empty": "0",
+                "template": "panel",
+                "packaged_with_module": "flexflow",
+                "children": [
+                    {
+                        "helper": "\\kernel\\form",
+                        "method": "cancel",
+                        "template": "cancel",
+                        "packaged_with_module": "flexflow"
+                    },
+                    {
+                        "helper": "\\kernel\\form",
+                        "method": "menu",
+                        "permission": "2",
+                        "template": "menu",
+                        "packaged_with_module": "flexflow"
+                    },
+                    {
+                        "name": [
+                            "action",
+                            "submit"
+                        ],
+                        "helper": "\\kernel\\form",
+                        "method": "submit",
+                        "template": "submit",
+                        "packaged_with_module": "flexflow"
+                    }
+                ]
+            },
+            {
+                "helper": "\\kernel\\form",
+                "method": "block",
+                "label": "Stages Information",
+                "cols": "2",
+                "compute_field_sequence": "1",
+                "empty": "1",
+                "show_collapsed": "0",
+                "not_empty": "0",
+                "open_on_focus": "0",
+                "template": "block",
+                "packaged_with_module": "flexflow",
+                "mw": false,
+                "children": [
+                    {
+                        "name": [
+                            "stages",
+                            "name"
+                        ],
+                        "label": "name",
+                        "helper": "\\kernel\\form",
+                        "method": "input",
+                        "model_column": "stages.name",
+                        "type": "text",
+                        "colspan": "3",
+                        "template": "input",
+                        "packaged_with_module": "flexflow",
+                        "mw": false
+                    },
+                    {
+                        "name": [
+                            "stages",
+                            "type_id"
+                        ],
+                        "__name": "stages.type_id",
+                        "label": "type_id",
+                        "colspan": "3",
+                        "inline_search": "1",
+                        "helper": "\\kernel\\form",
+                        "method": "popup",
+                        "show_model": "0",
+                        "show_link": "0",
+                        "concat_text_value": "0",
+                        "postfix_label": "0",
+                        "prefix_id": "0",
+                        "open_on_focus": "0",
+                        "template": "popup",
+                        "packaged_with_module": "flexflow",
+                        "mw": false,
+                        "children": [
+                            {
+                                "model": "types",
+                                "href": "flexflow/types/index",
+                                "not_empty": "0",
+                                "open_on_focus": "0",
+                                "template": "popupoption",
+                                "packaged_with_module": "flexflow"
+                            }
+                        ]
+                    },
+                    {
+                        "name": [
+                            "stages",
+                            "desc"
+                        ],
+                        "label": "description",
+                        "help": "Technical Information about stage (Not shared with users)",
+                        "colspan": "3",
+                        "class": "string width-100",
+                        "editor": "textarea",
+                        "is_web_compatible": "1",
+                        "is_mobile_compatible": "1",
+                        "ai_provider_id_model": "providers",
+                        "rules_grid": "1",
+                        "roles_grid": "1",
+                        "helper": "\\kernel\\form",
+                        "method": "textarea",
+                        "allow_copy_to_clipboard": "0",
+                        "allow_user_to_specify_user_level_default": "0",
+                        "auto_resize": "0",
+                        "allow_commenting_on_this_field": "0",
+                        "business_key": "65cd86e3-6e78-4dcc-91ad-4babac69033c",
+                        "template": "textarea",
+                        "packaged_with_module": "flexflow",
+                        "mw": false
+                    },
+                    {
+                        "name": [
+                            "stages",
+                            "help_text"
+                        ],
+                        "label": "help_text",
+                        "help": "Information to be shared with users in workflow log",
+                        "colspan": "3",
+                        "editor": "WYSIWYG-V1",
+                        "is_web_compatible": "1",
+                        "is_mobile_compatible": "1",
+                        "ai_provider_id_model": "providers",
+                        "rules_grid": "1",
+                        "roles_grid": "1",
+                        "helper": "\\kernel\\form",
+                        "method": "textarea",
+                        "allow_copy_to_clipboard": "0",
+                        "allow_user_to_specify_user_level_default": "0",
+                        "auto_resize": "0",
+                        "allow_commenting_on_this_field": "0",
+                        "business_key": "65cd86ed-f94c-4574-b914-44fdac69033c",
+                        "template": "textarea",
+                        "packaged_with_module": "flexflow",
+                        "mw": false
+                    },
+                    {
+                        "name": [
+                            "stages",
+                            "is_readonly"
+                        ],
+                        "label": "is_readonly",
+                        "help": "For system stages like \"End / Completed\".Read only marked stage do not have associated actors or actions.\t\t\t",
+                        "colspan": "3",
+                        "helper": "\\kernel\\form",
+                        "method": "checkbox",
+                        "open_on_focus": "0",
+                        "template": "checkbox",
+                        "packaged_with_module": "flexflow",
+                        "mw": false
+                    },
+                    {
+                        "name": [
+                            "stages",
+                            "is_deemed_approved"
+                        ],
+                        "label": "Eligible for deem approval",
+                        "help": "Deemed Approval assures that a user is not requested to approve something twice in different stages.\t\t\t",
+                        "colspan": "3",
+                        "helper": "\\kernel\\form",
+                        "method": "checkbox",
+                        "on_change_reload_form": "0",
+                        "not_empty": "0",
+                        "open_on_focus": "0",
+                        "template": "checkbox",
+                        "packaged_with_module": "flexflow",
+                        "mw": false
+                    },
+                    {
+                        "name": [
+                            "stages",
+                            "workflow_progress_direction"
+                        ],
+                        "label": "workflow_progress_direction",
+                        "empty": "1",
+                        "is_web_compatible": "1",
+                        "is_mobile_compatible": "1",
+                        "helper": "\\kernel\\form",
+                        "method": "select",
+                        "allow_copy_to_clipboard": "0",
+                        "business_key": "63b3381a-bfa8-4528-9cde-49a9ac69033c",
+                        "template": "select",
+                        "packaged_with_module": "flexflow",
+                        "mw": false,
+                        "children": [
+                            {
+                                "value": "Neutral",
+                                "__value": "Neutral",
+                                "text": "Neutral",
+                                "is_web_compatible": "1",
+                                "is_mobile_compatible": "1",
+                                "allow_copy_to_clipboard": "0",
+                                "business_key": "63b32c11-496c-481d-895d-4dd4ac69033c",
+                                "template": "option",
+                                "packaged_with_module": "flexflow"
+                            },
+                            {
+                                "value": "Positive",
+                                "__value": "Positive",
+                                "text": "Positive",
+                                "is_web_compatible": "1",
+                                "is_mobile_compatible": "1",
+                                "allow_copy_to_clipboard": "0",
+                                "business_key": "63b32bc5-1154-4767-b3df-4263ac69033c",
+                                "template": "option",
+                                "packaged_with_module": "flexflow"
+                            },
+                            {
+                                "value": "Negative",
+                                "__value": "Negative",
+                                "text": "Negative",
+                                "is_web_compatible": "1",
+                                "is_mobile_compatible": "1",
+                                "allow_copy_to_clipboard": "0",
+                                "business_key": "63b32bf0-8da0-4033-9df1-4c07ac69033c",
+                                "template": "option",
+                                "packaged_with_module": "flexflow"
+                            },
+                            {
+                                "value": "Starting Point",
+                                "text": "Starting Point",
+                                "is_web_compatible": "1",
+                                "is_mobile_compatible": "1",
+                                "allow_copy_to_clipboard": "0",
+                                "allow_user_to_specify_user_level_default": "0",
+                                "business_key": "647df24a-fde0-4590-a09f-4135ac69033c",
+                                "template": "option",
+                                "packaged_with_module": "flexflow"
+                            },
+                            {
+                                "value": "End Point",
+                                "__value": "End Point",
+                                "text": "End Point",
+                                "is_web_compatible": "1",
+                                "is_mobile_compatible": "1",
+                                "allow_copy_to_clipboard": "0",
+                                "business_key": "6436decc-69d0-4fc7-8874-49c6ac69033c",
+                                "template": "option",
+                                "packaged_with_module": "flexflow"
+                            },
+                            {
+                                "value": "End Point On Exit",
+                                "text": "End Point On Exit",
+                                "is_web_compatible": "1",
+                                "is_mobile_compatible": "1",
+                                "rules_grid": "1",
+                                "roles_grid": "1",
+                                "allow_copy_to_clipboard": "0",
+                                "allow_user_to_specify_user_level_default": "0",
+                                "business_key": "65cd869f-00b0-47eb-b623-40d6ac69033c",
+                                "template": "option",
+                                "packaged_with_module": "flexflow"
+                            },
+                            {
+                                "value": "End Point On Enter",
+                                "text": "End Point On Enter",
+                                "is_web_compatible": "1",
+                                "is_mobile_compatible": "1",
+                                "rules_grid": "1",
+                                "roles_grid": "1",
+                                "allow_copy_to_clipboard": "0",
+                                "allow_user_to_specify_user_level_default": "0",
+                                "business_key": "66b2a913-4068-4d2e-ad82-48b7ac69033c",
+                                "template": "option",
+                                "packaged_with_module": "flexflow"
+                            }
+                        ]
+                    },
+                    {
+                        "name": [
+                            "stages",
+                            "minimum_allocated_time"
+                        ],
+                        "label": "minimum_allocated_time",
+                        "tooltip": "This is the minimum time that this workflow stage will apply to your document. This is used for situations when you don't want to reply to clients right away and want at-least X amount of \"cool-off\" period.",
+                        "is_web_compatible": "1",
+                        "is_mobile_compatible": "1",
+                        "helper": "\\kernel\\form",
+                        "method": "number",
+                        "allow_copy_to_clipboard": "0",
+                        "business_key": "64354bb8-be38-4049-8d92-4e7cac69033c",
+                        "template": "number",
+                        "packaged_with_module": "flexflow",
+                        "mw": false
+                    },
+                    {
+                        "name": [
+                            "stages",
+                            "maximum_allocated_time"
+                        ],
+                        "label": "maximum_allocated_time",
+                        "tooltip": "This is time in hours of the maximum time allocated for this workflow stage. After this, the workflow is considered in default and goes through enterprise escalations.",
+                        "is_web_compatible": "1",
+                        "is_mobile_compatible": "1",
+                        "helper": "\\kernel\\form",
+                        "method": "number",
+                        "allow_copy_to_clipboard": "0",
+                        "business_key": "64354bd0-0908-4bc1-b593-41f2ac69033c",
+                        "template": "number",
+                        "packaged_with_module": "flexflow",
+                        "mw": false
+                    },
+                    {
+                        "name": [
+                            "stages",
+                            "is_fixed_start_date"
+                        ],
+                        "label": "Has Fixed Planned Start Date",
+                        "tooltip": "Checking this box will only allow you to enter this stage on the Fixed Planned Start Date. This is required when you don't want previous stages in the workflow to Activate this stage. An example is when a cohort starts on a fixed date.",
+                        "is_web_compatible": "1",
+                        "is_mobile_compatible": "1",
+                        "helper": "\\kernel\\form",
+                        "method": "checkbox",
+                        "allow_copy_to_clipboard": "0",
+                        "disable_autofill_while_cloning": "0",
+                        "allow_user_to_specify_user_level_default": "0",
+                        "business_key": "64bbc910-75bc-40e1-a859-4f80ac69033c",
+                        "template": "checkbox",
+                        "packaged_with_module": "flexflow",
+                        "mw": false
+                    },
+                    {
+                        "name": [
+                            "stages",
+                            "conditional_rule_id"
+                        ],
+                        "__name": "stages.conditional_rule_id",
+                        "label": "conditional_rule_id",
+                        "help": "At time of entering stage, this rule will be checked. Stage will be entered only if rule is empty or its result in true stage",
+                        "inline_search": "1",
+                        "is_web_compatible": "1",
+                        "is_mobile_compatible": "1",
+                        "select": "1",
+                        "open": "1",
+                        "helper": "\\kernel\\form",
+                        "method": "popup",
+                        "show_model": "0",
+                        "show_link": "0",
+                        "concat_text_value": "0",
+                        "postfix_label": "0",
+                        "prefix_id": "0",
+                        "allow_copy_to_clipboard": "0",
+                        "disable_autofill_while_cloning": "0",
+                        "allow_user_to_specify_user_level_default": "0",
+                        "business_key": "65044cb4-85b8-4e4c-b3d7-4650ac69033c",
+                        "template": "popup",
+                        "packaged_with_module": "flexflow",
+                        "mw": false
+                    },
+                    {
+                        "name": [
+                            "stages",
+                            "controller"
+                        ],
+                        "label": "controller",
+                        "readonly": "1",
+                        "is_web_compatible": "1",
+                        "is_mobile_compatible": "1",
+                        "helper": "\\kernel\\form",
+                        "method": "input",
+                        "allow_copy_to_clipboard": "0",
+                        "disable_autofill_while_cloning": "0",
+                        "allow_user_to_specify_user_level_default": "0",
+                        "business_key": "64e499dc-1fe8-4712-ae72-1e02f0dc7d4a",
+                        "template": "input",
+                        "packaged_with_module": "flexflow",
+                        "mw": false
+                    },
+                    {
+                        "name": [
+                            "stages",
+                            "model_state_id"
+                        ],
+                        "__name": "stages.model_state_id",
+                        "label": "model_state_id",
+                        "help": "Field permission and validation rules to be applied to form when workflow is in this stage. These rules can be further overridden via stage based field permission and validations.",
+                        "show_link": "1",
+                        "inline_search": "1",
+                        "is_web_compatible": "1",
+                        "is_mobile_compatible": "1",
+                        "select": "1",
+                        "open": "1",
+                        "rules_grid": "1",
+                        "roles_grid": "1",
+                        "helper": "\\kernel\\form",
+                        "method": "popup",
+                        "show_model": "0",
+                        "concat_text_value": "0",
+                        "postfix_label": "0",
+                        "prefix_id": "0",
+                        "allow_copy_to_clipboard": "0",
+                        "disable_autofill_while_cloning": "0",
+                        "allow_user_to_specify_user_level_default": "0",
+                        "business_key": "65d51402-e0a8-4070-a44e-4295ac69033c",
+                        "template": "popup",
+                        "packaged_with_module": "flexflow",
+                        "mw": false
+                    },
+                    {
+                        "name": [
+                            "stages",
+                            "maximum_allocation_time_field"
+                        ],
+                        "__name": "stages.maximum_allocation_time_field",
+                        "label": "maximum_allocation_time_field",
+                        "inline_search": "1",
+                        "is_web_compatible": "1",
+                        "is_mobile_compatible": "1",
+                        "select": "1",
+                        "open": "1",
+                        "rules_grid": "1",
+                        "roles_grid": "1",
+                        "helper": "\\kernel\\form",
+                        "method": "popup",
+                        "show_model": "0",
+                        "show_link": "0",
+                        "concat_text_value": "0",
+                        "postfix_label": "0",
+                        "prefix_id": "0",
+                        "allow_copy_to_clipboard": "0",
+                        "disable_autofill_while_cloning": "0",
+                        "allow_user_to_specify_user_level_default": "0",
+                        "business_key": "66bb6cf5-2c84-4a90-9896-4df3ac69033c",
+                        "template": "popup",
+                        "packaged_with_module": "flexflow",
+                        "mw": false,
+                        "children": [
+                            {
+                                "custom_model": "schema",
+                                "href": "metadata/schema/index?search_controller={{stages.controller}}",
+                                "is_web_compatible": "1",
+                                "is_mobile_compatible": "1",
+                                "rules_grid": "1",
+                                "roles_grid": "1",
+                                "allow_copy_to_clipboard": "0",
+                                "allow_user_to_specify_user_level_default": "0",
+                                "model": "schema",
+                                "business_key": "66bb6d17-98b0-444f-aa66-4e02ac69033c",
+                                "template": "popupoption",
+                                "packaged_with_module": "flexflow"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "helper": "\\kernel\\form",
+                "method": "tab",
+                "template": "tab",
+                "packaged_with_module": "flexflow",
+                "children": [
+                    {
+                        "label": "Stages Information",
+                        "helper": "\\kernel\\form",
+                        "method": "collection",
+                        "template": "collection",
+                        "packaged_with_module": "flexflow",
+                        "mw": false,
+                        "children": [
+                            {
+                                "name": [
+                                    "Stage Based Field Permissions"
+                                ],
+                                "label": "Stage Based Field Permissions",
+                                "primary_key": "stages.stage_based_field_permissions.id",
+                                "show_sequence_column": "1",
+                                "sequence_column_label": "seq",
+                                "seq_column": "seq",
+                                "deleted_column": "deleted",
+                                "show_labels": "1",
+                                "layout": "table",
+                                "alignment": "horizontal",
+                                "is_web_compatible": "1",
+                                "is_mobile_compatible": "1",
+                                "allow_row_reordering": "1",
+                                "allow_row_delete": "1",
+                                "allow_row_create": "1",
+                                "helper": "\\kernel\\form",
+                                "method": "grid",
+                                "seq": "0",
+                                "show_collapsed": "0",
+                                "allow_copy_to_clipboard": "0",
+                                "allow_user_to_specify_user_level_default": "0",
+                                "business_key": "64e4a2e6-d694-49fb-ba8c-2970f0dc7d4a",
+                                "template": "grid",
+                                "packaged_with_module": "flexflow",
+                                "mw": false,
+                                "children": [
+                                    {
+                                        "name": [
+                                            "stages",
+                                            "stage_based_field_permissions",
+                                            "is_active"
+                                        ],
+                                        "label": "is_active",
+                                        "is_web_compatible": "1",
+                                        "is_mobile_compatible": "1",
+                                        "helper": "\\kernel\\form",
+                                        "method": "checkbox",
+                                        "allow_copy_to_clipboard": "0",
+                                        "disable_autofill_while_cloning": "0",
+                                        "allow_user_to_specify_user_level_default": "0",
+                                        "business_key": "64e4a362-ffb0-4cee-a9c7-296ff0dc7d4a",
+                                        "template": "checkbox",
+                                        "packaged_with_module": "flexflow",
+                                        "mw": false
+                                    },
+                                    {
+                                        "name": [
+                                            "stages",
+                                            "stage_based_field_permissions",
+                                            "conditional_rule_id"
+                                        ],
+                                        "__name": "stages.stage_based_field_permissions.conditional_rule_id",
+                                        "label": "conditional_rule_id",
+                                        "inline_search": "1",
+                                        "is_web_compatible": "1",
+                                        "is_mobile_compatible": "1",
+                                        "select": "1",
+                                        "open": "1",
+                                        "rules_grid": "1",
+                                        "roles_grid": "1",
+                                        "helper": "\\kernel\\form",
+                                        "method": "popup",
+                                        "show_model": "0",
+                                        "show_link": "0",
+                                        "concat_text_value": "0",
+                                        "postfix_label": "0",
+                                        "prefix_id": "0",
+                                        "allow_copy_to_clipboard": "0",
+                                        "disable_autofill_while_cloning": "0",
+                                        "allow_user_to_specify_user_level_default": "0",
+                                        "business_key": "659d6033-d868-4df1-9c28-45c3ac69033c",
+                                        "template": "popup",
+                                        "packaged_with_module": "flexflow",
+                                        "mw": false,
+                                        "children": [
+                                            {
+                                                "model": "business_rules",
+                                                "href": "brules/business_rules/index",
+                                                "is_web_compatible": "1",
+                                                "is_mobile_compatible": "1",
+                                                "rules_grid": "1",
+                                                "roles_grid": "1",
+                                                "allow_copy_to_clipboard": "0",
+                                                "allow_user_to_specify_user_level_default": "0",
+                                                "business_key": "659d604f-7244-43d3-89d2-4a0dac69033c",
+                                                "template": "popupoption",
+                                                "packaged_with_module": "flexflow"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": [
+                                            "stages",
+                                            "stage_based_field_permissions",
+                                            "field_name"
+                                        ],
+                                        "__name": "stages.stage_based_field_permissions.field_name",
+                                        "label": "field_name",
+                                        "inline_search": "1",
+                                        "is_web_compatible": "1",
+                                        "is_mobile_compatible": "1",
+                                        "select": "1",
+                                        "open": "1",
+                                        "helper": "\\kernel\\form",
+                                        "method": "popup",
+                                        "show_model": "0",
+                                        "show_link": "0",
+                                        "concat_text_value": "0",
+                                        "postfix_label": "0",
+                                        "prefix_id": "0",
+                                        "allow_copy_to_clipboard": "0",
+                                        "disable_autofill_while_cloning": "0",
+                                        "allow_user_to_specify_user_level_default": "0",
+                                        "business_key": "64e4a33e-06b0-4cf3-8ee8-2997f0dc7d4a",
+                                        "template": "popup",
+                                        "packaged_with_module": "flexflow",
+                                        "mw": false,
+                                        "children": [
+                                            {
+                                                "href": "metadata/schema/index?search_controller={{stages.controller}}&fetch_associations=none&fetch_data_fields=1",
+                                                "is_web_compatible": "1",
+                                                "is_mobile_compatible": "1",
+                                                "allow_copy_to_clipboard": "0",
+                                                "allow_user_to_specify_user_level_default": "0",
+                                                "business_key": "64e66264-29e4-462d-b9f2-4d34f0dc7d4a",
+                                                "template": "popupoption",
+                                                "packaged_with_module": "flexflow"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": [
+                                            "stages",
+                                            "stage_based_field_permissions",
+                                            "permission_rule"
+                                        ],
+                                        "label": "permission_rule",
+                                        "lookup": "field_permission_rules",
+                                        "empty": "1",
+                                        "is_web_compatible": "1",
+                                        "is_mobile_compatible": "1",
+                                        "helper": "\\kernel\\form",
+                                        "method": "select",
+                                        "allow_copy_to_clipboard": "0",
+                                        "disable_autofill_while_cloning": "0",
+                                        "allow_user_to_specify_user_level_default": "0",
+                                        "business_key": "64e4a351-0328-4c37-88c7-296ff0dc7d4a",
+                                        "template": "select",
+                                        "packaged_with_module": "flexflow",
+                                        "mw": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": [
+                                    "Stage Based Field Validations"
+                                ],
+                                "label": "Stage Based Field Validations",
+                                "primary_key": "stages.stage_based_field_validations.id",
+                                "show_sequence_column": "1",
+                                "sequence_column_label": "seq",
+                                "seq_column": "seq",
+                                "deleted_column": "deleted",
+                                "show_labels": "1",
+                                "layout": "table",
+                                "alignment": "horizontal",
+                                "is_web_compatible": "1",
+                                "is_mobile_compatible": "1",
+                                "allow_row_reordering": "1",
+                                "allow_row_delete": "1",
+                                "allow_row_create": "1",
+                                "helper": "\\kernel\\form",
+                                "method": "grid",
+                                "seq": "0",
+                                "show_collapsed": "0",
+                                "allow_copy_to_clipboard": "0",
+                                "allow_user_to_specify_user_level_default": "0",
+                                "business_key": "64e4a2f8-3f38-43a4-9c4f-2997f0dc7d4a",
+                                "template": "grid",
+                                "packaged_with_module": "flexflow",
+                                "mw": false,
+                                "children": [
+                                    {
+                                        "name": [
+                                            "stages",
+                                            "stage_based_field_validations",
+                                            "is_active"
+                                        ],
+                                        "label": "is_active",
+                                        "is_web_compatible": "1",
+                                        "is_mobile_compatible": "1",
+                                        "helper": "\\kernel\\form",
+                                        "method": "checkbox",
+                                        "allow_copy_to_clipboard": "0",
+                                        "disable_autofill_while_cloning": "0",
+                                        "allow_user_to_specify_user_level_default": "0",
+                                        "business_key": "64e4a38e-92ec-48c0-99a2-296ff0dc7d4a",
+                                        "template": "checkbox",
+                                        "packaged_with_module": "flexflow",
+                                        "mw": false
+                                    },
+                                    {
+                                        "name": [
+                                            "stages",
+                                            "stage_based_field_validations",
+                                            "conditional_rule_id"
+                                        ],
+                                        "__name": "stages.stage_based_field_validations.conditional_rule_id",
+                                        "label": "conditional_rule_id",
+                                        "inline_search": "1",
+                                        "is_web_compatible": "1",
+                                        "is_mobile_compatible": "1",
+                                        "select": "1",
+                                        "open": "1",
+                                        "rules_grid": "1",
+                                        "roles_grid": "1",
+                                        "helper": "\\kernel\\form",
+                                        "method": "popup",
+                                        "show_model": "0",
+                                        "show_link": "0",
+                                        "concat_text_value": "0",
+                                        "postfix_label": "0",
+                                        "prefix_id": "0",
+                                        "allow_copy_to_clipboard": "0",
+                                        "disable_autofill_while_cloning": "0",
+                                        "allow_user_to_specify_user_level_default": "0",
+                                        "business_key": "659d6077-d1d0-464e-aaf1-49ccac69033c",
+                                        "template": "popup",
+                                        "packaged_with_module": "flexflow",
+                                        "mw": false,
+                                        "children": [
+                                            {
+                                                "model": "business_rules",
+                                                "href": "brules/business_rules/index",
+                                                "is_web_compatible": "1",
+                                                "is_mobile_compatible": "1",
+                                                "rules_grid": "1",
+                                                "roles_grid": "1",
+                                                "allow_copy_to_clipboard": "0",
+                                                "allow_user_to_specify_user_level_default": "0",
+                                                "business_key": "659d6093-9778-4c9d-8a29-4080ac69033c",
+                                                "template": "popupoption",
+                                                "packaged_with_module": "flexflow"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": [
+                                            "stages",
+                                            "stage_based_field_validations",
+                                            "field_name"
+                                        ],
+                                        "__name": "stages.stage_based_field_validations.field_name",
+                                        "label": "field_name",
+                                        "inline_search": "1",
+                                        "is_web_compatible": "1",
+                                        "is_mobile_compatible": "1",
+                                        "select": "1",
+                                        "open": "1",
+                                        "helper": "\\kernel\\form",
+                                        "method": "popup",
+                                        "show_model": "0",
+                                        "show_link": "0",
+                                        "concat_text_value": "0",
+                                        "postfix_label": "0",
+                                        "prefix_id": "0",
+                                        "allow_copy_to_clipboard": "0",
+                                        "disable_autofill_while_cloning": "0",
+                                        "allow_user_to_specify_user_level_default": "0",
+                                        "business_key": "64e4a371-c060-4495-9f0f-2997f0dc7d4a",
+                                        "template": "popup",
+                                        "packaged_with_module": "flexflow",
+                                        "mw": false,
+                                        "children": [
+                                            {
+                                                "href": "metadata/schema/index?search_controller={{stages.controller}}&fetch_associations=none&fetch_data_fields=1",
+                                                "is_web_compatible": "1",
+                                                "is_mobile_compatible": "1",
+                                                "allow_copy_to_clipboard": "0",
+                                                "allow_user_to_specify_user_level_default": "0",
+                                                "business_key": "64e6626c-c7b4-454d-b755-5040f0dc7d4a",
+                                                "template": "popupoption",
+                                                "packaged_with_module": "flexflow"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": [
+                                            "stages",
+                                            "stage_based_field_validations",
+                                            "validation_rule"
+                                        ],
+                                        "label": "validation_rule",
+                                        "lookup": "field_validation_rules",
+                                        "empty": "1",
+                                        "is_web_compatible": "1",
+                                        "is_mobile_compatible": "1",
+                                        "helper": "\\kernel\\form",
+                                        "method": "select",
+                                        "allow_copy_to_clipboard": "0",
+                                        "disable_autofill_while_cloning": "0",
+                                        "allow_user_to_specify_user_level_default": "0",
+                                        "business_key": "64e4a37f-04a4-4dd8-9db2-2970f0dc7d4a",
+                                        "template": "select",
+                                        "packaged_with_module": "flexflow",
+                                        "mw": false
+                                    },
+                                    {
+                                        "name": [
+                                            "stages",
+                                            "stage_based_field_validations",
+                                            "validation_params"
+                                        ],
+                                        "label": "validation_params",
+                                        "help": "Please Enter Validate Json Eg {\"Param1\":\"Value1\",\"Param2\":\"Value2\"}",
+                                        "is_web_compatible": "1",
+                                        "is_mobile_compatible": "1",
+                                        "helper": "\\kernel\\form",
+                                        "method": "input",
+                                        "allow_copy_to_clipboard": "0",
+                                        "disable_autofill_while_cloning": "0",
+                                        "allow_user_to_specify_user_level_default": "0",
+                                        "business_key": "65357eac-6fa0-4979-8102-4160ac69033c",
+                                        "template": "input",
+                                        "packaged_with_module": "flexflow",
+                                        "mw": false
+                                    },
+                                    {
+                                        "name": [
+                                            "stages",
+                                            "stage_based_field_validations",
+                                            "validation_message"
+                                        ],
+                                        "label": "validation_message",
+                                        "is_web_compatible": "1",
+                                        "is_mobile_compatible": "1",
+                                        "helper": "\\kernel\\form",
+                                        "method": "input",
+                                        "allow_copy_to_clipboard": "0",
+                                        "disable_autofill_while_cloning": "0",
+                                        "allow_user_to_specify_user_level_default": "0",
+                                        "business_key": "65357d5b-4938-499e-8672-4ec1ac69033c",
+                                        "template": "input",
+                                        "packaged_with_module": "flexflow",
+                                        "mw": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": [
+                                    "Actors"
+                                ],
+                                "label": "Actors",
+                                "load_menu": "1",
+                                "listview": "5264203b-cd9c-43c3-985f-2a230aec906d",
+                                "listview_model": "listviews",
+                                "__listview": "All",
+                                "pfooter": "1",
+                                "permission": "2",
+                                "helper": "\\kernel\\form",
+                                "method": "listview",
+                                "pheader": "0",
+                                "hide_listview_link": "0",
+                                "show_in_draft_mode": "0",
+                                "disable_search": "0",
+                                "show_collapsed": "0",
+                                "not_empty": "0",
+                                "open_on_focus": "0",
+                                "append_main_model_filter": "0",
+                                "is_first_level_filter": "0",
+                                "module": "flexflow",
+                                "controller": "actor_stage",
+                                "action": "index",
+                                "template": "listview",
+                                "packaged_with_module": "flexflow",
+                                "mw": false
+                            },
+                            {
+                                "name": [
+                                    "Possible Actions"
+                                ],
+                                "label": "Possible Actions",
+                                "load_menu": "1",
+                                "listview": "Possible Actions",
+                                "listview_model": "listviews",
+                                "__listview": "Possible Actions",
+                                "pfooter": "1",
+                                "permission": "2",
+                                "helper": "\\kernel\\form",
+                                "method": "listview",
+                                "pheader": "0",
+                                "hide_listview_link": "0",
+                                "show_in_draft_mode": "0",
+                                "disable_search": "0",
+                                "show_collapsed": "0",
+                                "not_empty": "0",
+                                "open_on_focus": "0",
+                                "append_main_model_filter": "0",
+                                "is_first_level_filter": "0",
+                                "module": "flexflow",
+                                "controller": "possible_actions",
+                                "action": "index",
+                                "template": "listview",
+                                "packaged_with_module": "flexflow",
+                                "mw": false
+                            },
+                            {
+                                "label": "Actions",
+                                "primary_key": "stages.possible_actions.id",
+                                "show_sequence_column": "1",
+                                "sequence_column_label": "seq",
+                                "seq": "1",
+                                "seq_column": "seq",
+                                "deleted_column": "deleted",
+                                "show_labels": "1",
+                                "layout": "table",
+                                "alignment": "horizontal",
+                                "permission": "1",
+                                "helper": "\\kernel\\form",
+                                "method": "grid",
+                                "show_collapsed": "0",
+                                "not_empty": "0",
+                                "open_on_focus": "0",
+                                "template": "grid",
+                                "packaged_with_module": "flexflow",
+                                "mw": false,
+                                "children": [
+                                    {
+                                        "name": [
+                                            "stages",
+                                            "possible_actions",
+                                            "action_id"
+                                        ],
+                                        "__name": "stages.possible_actions.action_id",
+                                        "label": "action_id",
+                                        "help": "Actions associated with the stage. the possible action on this stage is intersection of the Stage-Actions and Actor-Actions.",
+                                        "inline_search": "1",
+                                        "helper": "\\kernel\\form",
+                                        "method": "popup",
+                                        "show_model": "0",
+                                        "show_link": "0",
+                                        "concat_text_value": "0",
+                                        "postfix_label": "0",
+                                        "prefix_id": "0",
+                                        "open_on_focus": "0",
+                                        "template": "popup",
+                                        "packaged_with_module": "flexflow",
+                                        "mw": false,
+                                        "children": [
+                                            {
+                                                "custom_model": "actions",
+                                                "href": "flexflow/actions/index",
+                                                "model": "actions",
+                                                "method": "popupoption",
+                                                "template": "popupoption",
+                                                "packaged_with_module": "flexflow"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": [
+                                    "Stage Tasks"
+                                ],
+                                "label": "Stage Tasks",
+                                "load_menu": "1",
+                                "listview": "64072588-c4cc-4fd7-813b-b888f0dc7d4a",
+                                "listview_model": "listviews",
+                                "__listview": "Stage Tasks",
+                                "pfooter": "1",
+                                "is_web_compatible": "1",
+                                "is_mobile_compatible": "1",
+                                "is_first_level_filter": "0",
+                                "helper": "\\kernel\\form",
+                                "method": "listview",
+                                "pheader": "0",
+                                "hide_listview_link": "0",
+                                "show_in_draft_mode": "0",
+                                "disable_search": "0",
+                                "show_opened": "0",
+                                "append_main_model_filter": "0",
+                                "allow_copy_to_clipboard": "0",
+                                "module": "flexflow",
+                                "controller": "stage_tasks",
+                                "action": "index",
+                                "business_key": "640725d2-7504-4c93-adae-4441f0dc7d4a",
+                                "template": "listview",
+                                "packaged_with_module": "flexflow",
+                                "mw": false
+                            },
+                            {
+                                "label": "Rules",
+                                "primary_key": "stages.stage_business_rules.id",
+                                "show_sequence_column": "1",
+                                "sequence_column_label": "seq",
+                                "seq_column": "seq",
+                                "deleted_column": "deleted",
+                                "show_labels": "1",
+                                "layout": "table",
+                                "alignment": "horizontal",
+                                "permission": "1",
+                                "helper": "\\kernel\\form",
+                                "method": "grid",
+                                "seq": "0",
+                                "show_collapsed": "0",
+                                "not_empty": "0",
+                                "open_on_focus": "0",
+                                "template": "grid",
+                                "packaged_with_module": "flexflow",
+                                "mw": false,
+                                "children": [
+                                    {
+                                        "name": [
+                                            "stages",
+                                            "stage_business_rules",
+                                            "stage_id"
+                                        ],
+                                        "__name": "stages.stage_business_rules.stage_id",
+                                        "label": "Business Rules",
+                                        "inline_search": "1",
+                                        "helper": "\\kernel\\form",
+                                        "method": "popup",
+                                        "on_change_reload_form": "0",
+                                        "show_model": "0",
+                                        "show_link": "0",
+                                        "concat_text_value": "0",
+                                        "not_empty": "0",
+                                        "postfix_label": "0",
+                                        "prefix_id": "0",
+                                        "open_on_focus": "0",
+                                        "template": "popup",
+                                        "packaged_with_module": "flexflow",
+                                        "mw": false,
+                                        "children": [
+                                            {
+                                                "model": "stage_business_rules",
+                                                "href": "brules/business_rules/index",
+                                                "not_empty": "0",
+                                                "open_on_focus": "0",
+                                                "template": "popupoption",
+                                                "packaged_with_module": "flexflow"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": [
+                                    "Stage Contracts"
+                                ],
+                                "label": "Stage Contracts",
+                                "load_menu": "1",
+                                "listview": "642c3b5d-7250-41e1-941e-de43f0dc7d4a",
+                                "listview_model": "listviews",
+                                "__listview": "All",
+                                "pfooter": "1",
+                                "is_web_compatible": "1",
+                                "is_mobile_compatible": "1",
+                                "is_first_level_filter": "0",
+                                "helper": "\\kernel\\form",
+                                "method": "listview",
+                                "pheader": "0",
+                                "hide_listview_link": "0",
+                                "show_in_draft_mode": "0",
+                                "disable_search": "0",
+                                "show_opened": "0",
+                                "append_main_model_filter": "0",
+                                "allow_copy_to_clipboard": "0",
+                                "module": "flexflow",
+                                "controller": "stage_contracts",
+                                "action": "index",
+                                "business_key": "642d4dd7-d688-428c-96e8-4a86f0dc7d4a",
+                                "template": "listview",
+                                "packaged_with_module": "flexflow",
+                                "mw": false
+                            },
+                            {
+                                "name": [
+                                    "Stage Documents"
+                                ],
+                                "label": "Stage Documents",
+                                "load_menu": "1",
+                                "listview": "642d4d48-a17c-4a2a-a577-4e55f0dc7d4a",
+                                "listview_model": "listviews",
+                                "__listview": "All",
+                                "pfooter": "1",
+                                "is_web_compatible": "1",
+                                "is_mobile_compatible": "1",
+                                "is_first_level_filter": "0",
+                                "helper": "\\kernel\\form",
+                                "method": "listview",
+                                "pheader": "0",
+                                "hide_listview_link": "0",
+                                "show_in_draft_mode": "0",
+                                "disable_search": "0",
+                                "show_opened": "0",
+                                "append_main_model_filter": "0",
+                                "allow_copy_to_clipboard": "0",
+                                "module": "flexflow",
+                                "controller": "stage_documents",
+                                "action": "index",
+                                "business_key": "6433eb52-1eb8-487f-a5a5-45d3ac69033c",
+                                "template": "listview",
+                                "packaged_with_module": "flexflow",
+                                "mw": false
+                            },
+                            {
+                                "label": "Business Rules",
+                                "load_menu": "1",
+                                "listview": "52611fb5-db5c-4df0-a18b-1d890acef1b9",
+                                "listview_model": "listviews",
+                                "__listview": "Stage-Brules",
+                                "pfooter": "1",
+                                "helper": "\\kernel\\form",
+                                "method": "listview",
+                                "pheader": "0",
+                                "hide_listview_link": "0",
+                                "show_in_draft_mode": "0",
+                                "disable_search": "0",
+                                "show_collapsed": "0",
+                                "not_empty": "0",
+                                "open_on_focus": "0",
+                                "append_main_model_filter": "0",
+                                "is_first_level_filter": "0",
+                                "module": "brules",
+                                "controller": "business_rules",
+                                "action": "index",
+                                "template": "listview",
+                                "packaged_with_module": "flexflow",
+                                "mw": false
+                            },
+                            {
+                                "load_menu": "1",
+                                "listview": "642c3b5d-7250-41e1-941e-de43f0dc7d4a",
+                                "listview_model": "listviews",
+                                "__listview": "All",
+                                "pfooter": "1",
+                                "is_web_compatible": "1",
+                                "is_mobile_compatible": "1",
+                                "is_first_level_filter": "0",
+                                "helper": "\\kernel\\form",
+                                "method": "listview",
+                                "pheader": "0",
+                                "hide_listview_link": "0",
+                                "show_in_draft_mode": "0",
+                                "disable_search": "0",
+                                "show_opened": "0",
+                                "append_main_model_filter": "0",
+                                "allow_copy_to_clipboard": "0",
+                                "module": "flexflow",
+                                "controller": "stage_contracts",
+                                "action": "index",
+                                "business_key": "642c3c7f-9328-48c3-ac5c-e47df0dc7d4a",
+                                "template": "listview",
+                                "packaged_with_module": "flexflow"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Notifications Information",
+                        "is_web_compatible": "1",
+                        "is_mobile_compatible": "1",
+                        "helper": "\\kernel\\form",
+                        "method": "collection",
+                        "field_collection": "0",
+                        "allow_copy_to_clipboard": "0",
+                        "business_key": "6436dd03-3884-45c7-a913-4922ac69033c",
+                        "template": "collection",
+                        "packaged_with_module": "flexflow",
+                        "mw": false,
+                        "children": [
+                            {
+                                "helper": "\\kernel\\form",
+                                "method": "listview",
+                                "label": "Notifications",
+                                "load_menu": "1",
+                                "listview": "SYSTEM STAGE NOTIFICATIONS",
+                                "listview_model": "listviews",
+                                "__listview": "SYSTEM STAGE NOTIFICATIONS",
+                                "pfooter": "1",
+                                "empty": "1",
+                                "pheader": "0",
+                                "hide_listview_link": "0",
+                                "show_in_draft_mode": "0",
+                                "disable_search": "0",
+                                "show_collapsed": "0",
+                                "not_empty": "0",
+                                "is_first_level_filter": "0",
+                                "module": "flexflow",
+                                "controller": "notifications_stages",
+                                "action": "index",
+                                "template": "listview",
+                                "packaged_with_module": "flexflow",
+                                "mw": false
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": [
+                    "Form Script"
+                ],
+                "label": "Form Script",
+                "rules_grid": "1",
+                "roles_grid": "1",
+                "helper": "\\kernel\\form",
+                "method": "javascript",
+                "javascript": "$('[name*=\"[field_name]\"]').change(function(){   \r\n    var valueSplit=$(this).val();   \r\n    if(jQuery.trim(valueSplit) != \"\"){\r\n\t\t\tvalueSplit=valueSplit.split('::');\r\n\t\t\tvalueSplit=(valueSplit.length > 1?valueSplit[1]:valueSplit[0]);        \r\n\t\t\t$(this).val(valueSplit);       \r\n\t\t\t$(this).closest('.cell-info-grid').find('.popup-autocomplete').val(valueSplit);   \r\n\t\t}\r\n});\r\n\r\n$('[name*=\"[maximum_allocation_time_field]\"]').change(function(){\r\n    var valueSplit=$(this).val();\r\n    if(jQuery.trim(valueSplit) != \"\"){\r\n        valueSplit=valueSplit.split('::');\r\n        valueSplit=(valueSplit.length > 1?valueSplit[1]:valueSplit[0]);\r\n        $(this).val(valueSplit);\r\n        $(this).closest('.cell-info-grid').find('.popup-autocomplete').val(valueSplit);   \r\n    }\r\n});",
+                "require_document_ready": "0",
+                "business_key": "66bb6e2e-e0fc-46d4-946d-4cf2ac69033c",
+                "template": "javascript",
+                "packaged_with_module": "flexflow",
+                "mw": false
+            }
+        ],
+        "inline_views": [
+            {
+                "listviews.id": "5264203b-cd9c-43c3-985f-2a230aec906d",
+                "listviews.controller": "flexflow/actor_stage"
+            },
+            {
+                "listviews.name": "Possible Actions",
+                "listviews.controller": "flexflow/possible_actions"
+            },
+            {
+                "listviews.id": "64072588-c4cc-4fd7-813b-b888f0dc7d4a",
+                "listviews.controller": "flexflow/stage_tasks"
+            },
+            {
+                "listviews.id": "642c3b5d-7250-41e1-941e-de43f0dc7d4a",
+                "listviews.controller": "flexflow/stage_contracts"
+            },
+            {
+                "listviews.id": "642d4d48-a17c-4a2a-a577-4e55f0dc7d4a",
+                "listviews.controller": "flexflow/stage_documents"
+            },
+            {
+                "listviews.id": "52611fb5-db5c-4df0-a18b-1d890acef1b9",
+                "listviews.controller": "brules/business_rules"
+            },
+            {
+                "listviews.id": "642c3b5d-7250-41e1-941e-de43f0dc7d4a",
+                "listviews.controller": "flexflow/stage_contracts"
+            },
+            {
+                "listviews.name": "SYSTEM STAGE NOTIFICATIONS",
+                "listviews.controller": "flexflow/notifications_stages"
+            }
+        ],
+        "inline_views_action": [
+            "flexflow/actor_stage/index",
+            "flexflow/possible_actions/index",
+            "flexflow/stage_tasks/index",
+            "flexflow/stage_contracts/index",
+            "flexflow/stage_documents/index",
+            "brules/business_rules/index",
+            "flexflow/stage_contracts/index",
+            "flexflow/notifications_stages/index"
+        ],
+        "labels": {
+            "Stages Information": "Stages  Information",
+            "Form Script": "Form  Script",
+            "name": "Name",
+            "type_id": "Type",
+            "description": "Description",
+            "help_text": "Help Text",
+            "is_readonly": "Is Readonly",
+            "Eligible for deem approval": "Eligible For Deem Approval",
+            "workflow_progress_direction": "Workflow Progress Direction",
+            "minimum_allocated_time": "Minimum Allocated Time",
+            "maximum_allocated_time": "Maximum Allocated Time",
+            "Has Fixed Planned Start Date": "Has  Fixed  Planned  Start  Date",
+            "conditional_rule_id": "Conditional Rule",
+            "controller": "Controller",
+            "model_state_id": "Model State",
+            "maximum_allocation_time_field": "Maximum Allocation Time Field",
+            "Notifications Information": "Notifications  Information",
+            "Notifications": "Notifications",
+            "Stage Based Field Permissions": "Stage  Based  Field  Permissions",
+            "Stage Based Field Validations": "Stage  Based  Field  Validations",
+            "Actors": "Actors",
+            "Possible Actions": "Possible Actions",
+            "Actions": "Actions",
+            "Stage Tasks": "Stage Tasks",
+            "Rules": "Rules",
+            "Stage Contracts": "Stage Contracts",
+            "Stage Documents": "Stage Documents",
+            "Business Rules": "Business  Rules",
+            "action_id": "Action",
+            "is_active": "Is Active",
+            "field_name": "Field Name",
+            "permission_rule": "Permission Rule",
+            "validation_rule": "Validation Rule",
+            "validation_params": "Validation Params",
+            "validation_message": "Validation Message"
+        },
+        "form_metadata_id": "52611ec1-4dd8-4c98-b096-1d890acef1b9",
+        "form_view_href": "/development_base/forms/view/id:52611ec1-4dd8-4c98-b096-1d890acef1b9",
+        "field_configurations": [],
+        "field_request_status": "",
+        "field_request_message": "",
+        "permission": 4
+    },
+    "rebaseline": [],
+    "allow_comments": 0,
+    "is_editable": 1,
+    "is_deletable": 1,
+    "current_form_page": "",
+    "inherit_views": 1,
+    "alias": "stages",
+    "singular": "stage",
+    "controllerClass": "\\module\\flexflow\\controller\\stages",
+    "modelClass": "\\module\\flexflow\\model\\stages",
+    "notEmptyField": {
+        "stages": {
+            "name": "name",
+            "possible_actions": {
+                "action_id": "action_id",
+                "stage_id": "stage_id"
+            },
+            "stage_based_field_permissions": [],
+            "stage_based_field_validations": []
+        },
+        "possible_actions": {
+            "action_id": "action_id",
+            "stage_id": "stage_id"
+        },
+        "stage_based_field_permissions": [],
+        "stage_based_field_validations": []
+    },
+    "user_id": "536",
+    "user_fullname": "Akshay Rakheja"
+}
