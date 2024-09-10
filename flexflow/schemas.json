@@ -1,0 +1,286 @@
+{
+    "data": {
+        "schemas": {
+            "created": "2023-08-11 19:46:48",
+            "created_by": "150",
+            "id": "47",
+            "modified": "2023-08-11 19:47:31",
+            "modified_by": "150",
+            "name": "\\module\\crm\\model\\peoples",
+            "deleted": "0",
+            "desc": null,
+            "flags": "0",
+            "imported": null,
+            "imported_by": null,
+            "is_demo_data": "0",
+            "owned_by": null,
+            "revision": "2",
+            "runlevel_flag": null,
+            "__created_by": "Kay GABRI",
+            "created_by_user_name": "kay@62mile.vc",
+            "__modified_by": "Kay GABRI",
+            "modified_by_user_name": "kay@62mile.vc",
+            "__owned_by": "",
+            "owned_by_user_name": null,
+            "created_by_model": "created_by_user",
+            "modified_by_model": "modified_by_user"
+        }
+    },
+    "errors": [],
+    "message": [],
+    "association_models": {},
+    "primary_key": "id",
+    "display_field": "name",
+    "model": "schemas",
+    "model_class": "\\module\\flexflow\\model\\schemas",
+    "id": "47",
+    "permissions": [],
+    "model_associations": {
+        "created_by_user": {
+            "associationAlias": "created_by_user",
+            "className": "\\module\\access_controls\\model\\users",
+            "assocType": "belongsTo",
+            "foreignKey": "created_by",
+            "show_link": "0"
+        },
+        "modified_by_user": {
+            "associationAlias": "modified_by_user",
+            "className": "\\module\\access_controls\\model\\users",
+            "assocType": "belongsTo",
+            "foreignKey": "modified_by",
+            "show_link": "0"
+        },
+        "types": {
+            "assocType": "hasMany",
+            "className": "\\module\\flexflow\\model\\types",
+            "associationAlias": "types",
+            "foreignKey": "schema_id",
+            "show_link": "1",
+            "isAclParent": "0",
+            "isAclChild": "0",
+            "isSubModel": "0"
+        },
+        "owned_by_user": {
+            "className": "\\module\\access_controls\\model\\users",
+            "assocType": "belongsTo",
+            "foreignKey": "owned_by",
+            "associationAlias": "owned_by_user"
+        },
+        "docs": {
+            "className": "\\module\\flexflow\\model\\docs",
+            "assocType": "hasMany",
+            "foreignKey": "schema_id",
+            "name": "docs",
+            "is_binded": true
+        }
+    },
+    "model_behaviours": {
+        "\\module\\core\\behaviour\\revision_log": {
+            "name": "\\module\\core\\behaviour\\revision_log",
+            "ignore_modules": [
+                "logging",
+                "development_base",
+                "development"
+            ],
+            "ignore_models": [
+                "\\module\\access_controls\\model\\design_acl"
+            ]
+        }
+    },
+    "is_pseudo_design_element": 0,
+    "name": "\\module\\crm\\model\\peoples",
+    "filterRules": {
+        "name": [
+            {
+                "rule": "required"
+            },
+            {
+                "rule": "1024",
+                "params": {
+                    "options": [
+                        "\\kernel\\validation",
+                        "notEmpty"
+                    ]
+                }
+            }
+        ]
+    },
+    "form": {
+        "name": "default",
+        "method": "POST",
+        "ENCTYPE": "multipart/form-data",
+        "model_class": "\\module\\flexflow\\model\\schemas",
+        "template": "form",
+        "children": [
+            {
+                "helper": "\\kernel\\form",
+                "method": "panel",
+                "class": "align-center",
+                "empty": "1",
+                "show_collapsed": "0",
+                "not_empty": "0",
+                "template": "panel",
+                "packaged_with_module": "flexflow",
+                "children": [
+                    {
+                        "helper": "\\kernel\\form",
+                        "method": "cancel",
+                        "template": "cancel",
+                        "packaged_with_module": "flexflow"
+                    },
+                    {
+                        "helper": "\\kernel\\form",
+                        "method": "menu",
+                        "permission": "2",
+                        "template": "menu",
+                        "packaged_with_module": "flexflow"
+                    },
+                    {
+                        "name": [
+                            "action",
+                            "submit"
+                        ],
+                        "helper": "\\kernel\\form",
+                        "method": "submit",
+                        "value": "Submit",
+                        "template": "submit",
+                        "packaged_with_module": "flexflow"
+                    }
+                ]
+            },
+            {
+                "helper": "\\kernel\\form",
+                "method": "block",
+                "label": "Schema Information",
+                "cols": "2",
+                "compute_field_sequence": "1",
+                "empty": "1",
+                "show_collapsed": "0",
+                "not_empty": "0",
+                "open_on_focus": "0",
+                "template": "block",
+                "packaged_with_module": "flexflow",
+                "mw": false,
+                "children": [
+                    {
+                        "name": [
+                            "schemas",
+                            "name"
+                        ],
+                        "label": "name",
+                        "help": "Model to which the current flexflow doc is attach to.",
+                        "colspan": "3",
+                        "class": "string",
+                        "lookup": "association_models",
+                        "empty": "1",
+                        "helper": "\\kernel\\form",
+                        "method": "select",
+                        "open_on_focus": "0",
+                        "template": "select",
+                        "packaged_with_module": "flexflow",
+                        "mw": false
+                    },
+                    {
+                        "label": "desc",
+                        "name": [
+                            "schemas",
+                            "desc"
+                        ],
+                        "helper": "\\kernel\\form",
+                        "method": "textarea",
+                        "class": "string width-100",
+                        "editor": "textarea",
+                        "colspan": "3",
+                        "template": "textarea",
+                        "packaged_with_module": "flexflow",
+                        "mw": false
+                    }
+                ]
+            },
+            {
+                "helper": "\\kernel\\form",
+                "method": "tab",
+                "template": "tab",
+                "packaged_with_module": "flexflow",
+                "children": [
+                    {
+                        "label": "Types",
+                        "helper": "\\kernel\\form",
+                        "method": "collection",
+                        "not_empty": "0",
+                        "open_on_focus": "0",
+                        "template": "collection",
+                        "packaged_with_module": "flexflow",
+                        "mw": false,
+                        "children": [
+                            {
+                                "label": "Types",
+                                "load_menu": "1",
+                                "listview": "Type",
+                                "listview_model": "listviews",
+                                "__listview": "Type",
+                                "pfooter": "1",
+                                "permission": "2",
+                                "helper": "\\kernel\\form",
+                                "method": "listview",
+                                "pheader": "0",
+                                "hide_listview_link": "0",
+                                "show_in_draft_mode": "0",
+                                "disable_search": "0",
+                                "show_collapsed": "0",
+                                "not_empty": "0",
+                                "open_on_focus": "0",
+                                "append_main_model_filter": "0",
+                                "is_first_level_filter": "0",
+                                "module": "flexflow",
+                                "controller": "types",
+                                "action": "index",
+                                "template": "listview",
+                                "packaged_with_module": "flexflow",
+                                "mw": false
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "inline_views": [
+            {
+                "listviews.name": "Type",
+                "listviews.controller": "flexflow/types"
+            }
+        ],
+        "inline_views_action": [
+            "flexflow/types/index"
+        ],
+        "labels": {
+            "Schema Information": "Schema  Information",
+            "name": "Name",
+            "desc": "Desc",
+            "Types": "Types"
+        },
+        "form_metadata_id": "52611ec1-0f58-4777-a615-1d890acef1b9",
+        "form_view_href": "/development_base/forms/view/id:52611ec1-0f58-4777-a615-1d890acef1b9",
+        "field_configurations": [],
+        "field_request_status": "",
+        "field_request_message": "",
+        "permission": 4
+    },
+    "rebaseline": [],
+    "allow_comments": 0,
+    "is_editable": 1,
+    "is_deletable": 1,
+    "current_form_page": "",
+    "inherit_views": 1,
+    "alias": "schemas",
+    "singular": "schema",
+    "controllerClass": "\\module\\flexflow\\controller\\schemas",
+    "modelClass": "\\module\\flexflow\\model\\schemas",
+    "notEmptyField": {
+        "schemas": {
+            "name": "name"
+        }
+    },
+    "user_id": "536",
+    "user_fullname": "Akshay Rakheja"
+}

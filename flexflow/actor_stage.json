@@ -1,0 +1,294 @@
+{
+    "data": {
+        "actor_stage": {
+            "actor_id": "24",
+            "can_edit": "1",
+            "created": "2023-08-12 22:05:19",
+            "created_by": "150",
+            "id": "2422",
+            "modified": "2023-08-12 22:05:19",
+            "stage_id": "502",
+            "can_delete": null,
+            "deleted": "0",
+            "flags": "0",
+            "imported": null,
+            "imported_by": null,
+            "is_demo_data": "0",
+            "modified_by": null,
+            "owned_by": null,
+            "revision": "1",
+            "__stage_id": "01 ONBOARDING",
+            "__actor_id": "Entity Owned By",
+            "__created_by": "Kay GABRI",
+            "created_by_user_name": "kay@62mile.vc",
+            "__modified_by": "",
+            "modified_by_user_name": null,
+            "__owned_by": "",
+            "owned_by_user_name": null,
+            "stage_id_model": "stages",
+            "actor_id_model": "actors",
+            "created_by_model": "created_by_user"
+        }
+    },
+    "errors": [],
+    "message": [],
+    "primary_key": "id",
+    "display_field": "id",
+    "model": "actor_stage",
+    "model_class": "\\module\\flexflow\\model\\actor_stage",
+    "id": "2422",
+    "permissions": [],
+    "model_associations": {
+        "stages": {
+            "associationAlias": "stages",
+            "className": "\\module\\flexflow\\model\\stages",
+            "assocType": "belongsTo",
+            "foreignKey": "stage_id"
+        },
+        "actors": {
+            "associationAlias": "actors",
+            "className": "\\module\\flexflow\\model\\actors",
+            "assocType": "belongsTo",
+            "foreignKey": "actor_id"
+        },
+        "created_by_user": {
+            "associationAlias": "created_by_user",
+            "className": "\\module\\access_controls\\model\\users",
+            "assocType": "belongsTo",
+            "foreignKey": "created_by",
+            "show_link": "0"
+        },
+        "modified_by_user": {
+            "associationAlias": "modified_by_user",
+            "className": "\\module\\access_controls\\model\\users",
+            "assocType": "belongsTo",
+            "foreignKey": "modified_by",
+            "show_link": "0"
+        },
+        "owned_by_user": {
+            "className": "\\module\\access_controls\\model\\users",
+            "assocType": "belongsTo",
+            "foreignKey": "owned_by",
+            "associationAlias": "owned_by_user"
+        }
+    },
+    "model_behaviours": {
+        "\\module\\core\\behaviour\\revision_log": {
+            "name": "\\module\\core\\behaviour\\revision_log",
+            "ignore_modules": [
+                "logging",
+                "development_base",
+                "development"
+            ],
+            "ignore_models": [
+                "\\module\\access_controls\\model\\design_acl"
+            ]
+        }
+    },
+    "is_pseudo_design_element": 0,
+    "name": "2422",
+    "filterRules": {
+        "stage_id": [
+            {
+                "rule": "required"
+            },
+            {
+                "rule": "1024",
+                "params": {
+                    "options": [
+                        "\\kernel\\validation",
+                        "notEmpty"
+                    ]
+                }
+            }
+        ],
+        "actor_id": [
+            {
+                "rule": "required"
+            },
+            {
+                "rule": "1024",
+                "params": {
+                    "options": [
+                        "\\kernel\\validation",
+                        "notEmpty"
+                    ]
+                }
+            }
+        ]
+    },
+    "form": {
+        "name": "default",
+        "method": "POST",
+        "ENCTYPE": "multipart/form-data",
+        "model_class": "\\module\\flexflow\\model\\actor_stage",
+        "template": "form",
+        "children": [
+            {
+                "helper": "\\kernel\\form",
+                "method": "panel",
+                "class": "align-center",
+                "empty": "1",
+                "show_collapsed": "0",
+                "not_empty": "0",
+                "template": "panel",
+                "packaged_with_module": "flexflow",
+                "children": [
+                    {
+                        "helper": "\\kernel\\form",
+                        "method": "cancel",
+                        "template": "cancel",
+                        "packaged_with_module": "flexflow"
+                    },
+                    {
+                        "helper": "\\kernel\\form",
+                        "method": "menu",
+                        "permission": "2",
+                        "template": "menu",
+                        "packaged_with_module": "flexflow"
+                    },
+                    {
+                        "name": [
+                            "action",
+                            "submit"
+                        ],
+                        "helper": "\\kernel\\form",
+                        "method": "submit",
+                        "value": "Submit",
+                        "template": "submit",
+                        "packaged_with_module": "flexflow"
+                    }
+                ]
+            },
+            {
+                "helper": "\\kernel\\form",
+                "method": "block",
+                "label": "Actors For Stage",
+                "cols": "2",
+                "compute_field_sequence": "1",
+                "empty": "1",
+                "show_collapsed": "0",
+                "not_empty": "0",
+                "open_on_focus": "0",
+                "template": "block",
+                "packaged_with_module": "flexflow",
+                "mw": false,
+                "children": [
+                    {
+                        "label": "stage_id",
+                        "name": [
+                            "actor_stage",
+                            "stage_id"
+                        ],
+                        "helper": "\\kernel\\form",
+                        "method": "popup",
+                        "model_column": "actor_stage.stage_id",
+                        "colspan": "3",
+                        "show_link": "1",
+                        "template": "popup",
+                        "packaged_with_module": "flexflow",
+                        "mw": false,
+                        "children": [
+                            {
+                                "model": "stages",
+                                "href": "flexflow/stages/index",
+                                "method": "popupoption",
+                                "template": "popupoption",
+                                "packaged_with_module": "flexflow"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "actor_id",
+                        "name": [
+                            "actor_stage",
+                            "actor_id"
+                        ],
+                        "helper": "\\kernel\\form",
+                        "method": "popup",
+                        "model_column": "actor_stage.actor_id",
+                        "colspan": "3",
+                        "show_link": "1",
+                        "template": "popup",
+                        "packaged_with_module": "flexflow",
+                        "mw": false,
+                        "children": [
+                            {
+                                "model": "actors",
+                                "href": "flexflow/actors/index",
+                                "method": "popupoption",
+                                "template": "popupoption",
+                                "packaged_with_module": "flexflow"
+                            }
+                        ]
+                    },
+                    {
+                        "helper": "\\kernel\\form",
+                        "method": "checkbox",
+                        "name": [
+                            "actor_stage",
+                            "can_edit"
+                        ],
+                        "label": "can_edit",
+                        "empty": "1",
+                        "template": "checkbox",
+                        "packaged_with_module": "flexflow",
+                        "mw": false
+                    },
+                    {
+                        "helper": "\\kernel\\form",
+                        "method": "checkbox",
+                        "name": [
+                            "actor_stage",
+                            "can_delete"
+                        ],
+                        "label": "can_delete",
+                        "empty": "1",
+                        "template": "checkbox",
+                        "packaged_with_module": "flexflow",
+                        "mw": false
+                    }
+                ]
+            },
+            {
+                "web_compatible": "1",
+                "helper": "\\kernel\\form",
+                "method": "tab",
+                "mobile_compatible": "0",
+                "template": "tab",
+                "packaged_with_module": "flexflow"
+            }
+        ],
+        "labels": {
+            "Actors For Stage": "Actors  For  Stage",
+            "stage_id": "Stage",
+            "actor_id": "Actor",
+            "can_edit": "Can Edit",
+            "can_delete": "Can Delete"
+        },
+        "form_metadata_id": "52611ec1-84f4-4af7-bf8e-1d890acef1b9",
+        "form_view_href": "/development_base/forms/view/id:52611ec1-84f4-4af7-bf8e-1d890acef1b9",
+        "field_configurations": [],
+        "field_request_status": "",
+        "field_request_message": "",
+        "permission": 4
+    },
+    "rebaseline": [],
+    "allow_comments": 0,
+    "is_editable": 1,
+    "is_deletable": 1,
+    "current_form_page": "",
+    "inherit_views": 1,
+    "alias": "actor_stage",
+    "singular": "actor_stage",
+    "controllerClass": "\\module\\flexflow\\controller\\actor_stage",
+    "modelClass": "\\module\\flexflow\\model\\actor_stage",
+    "notEmptyField": {
+        "actor_stage": {
+            "stage_id": "stage_id",
+            "actor_id": "actor_id"
+        }
+    },
+    "user_id": "536",
+    "user_fullname": "Akshay Rakheja"
+}
